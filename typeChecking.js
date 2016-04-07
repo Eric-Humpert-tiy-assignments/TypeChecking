@@ -8,8 +8,12 @@
 // Then refactor the function to have a default
 // amount of 1 if no param is given.
 
+
+//the value of speed was being set to not a number because when the value of speed which was starting as zero was equal to added to null the result was not a real number.
 var speed = 0
 
-function accelerate(amount) {
-    speed += amount
+function accelerate(amount = 1) {
+    return speed += amount;
 }
+
+console.log(accelerate());
